@@ -12,7 +12,21 @@
 
 // changeAllArticlesColors()
 
-function attachBuyEvents(){
+function attachBuyEvents() {
+    let product = document.querySelector('#products')
+     let articles = product.querySelectorAll('article')
+     
+     for(let article of articles){
+        const buttons = article.querySelectorAll('button')   
+         
 
+    buttons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            console.log(e.currentTarget);
+             
+        });
+    });
 }
-attachBuyEvents()
+}
+
+attachBuyEvents();
